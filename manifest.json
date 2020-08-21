@@ -1,7 +1,7 @@
  {
-  "name": "Molise Run",
-  "short_name": "Molise Run",
-  "description": "Molise Run Arcade Game",
+  "name": "Paramount Network PWA",
+  "short_name": "Paramount Network",
+  "description": "Le serie TV, i film e le novità di Paramount Network, Spike e VH1",
   "icons": [
     {
       "src": "assets/icons/48.png",
@@ -71,8 +71,8 @@
     }
   ],
   "start_url": "index.html",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#6abd30",
-  "background_color": "#6abd30"
+  "theme_color": "#0166A4",
+  "background_color": "#0166A4"
 }
