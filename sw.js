@@ -1,20 +1,12 @@
 var filesToCache = [
-'/molise-run/',
+'/paramount-pwa/',
 'index.html',
-'style.css',
-'assets/script.js',
-'assets/font.ttf',
-'assets/icons/48.png',
-'assets/icons/96.png',
-'assets/icons/192.png',
-'assets/icons/384.png',
-'assets/icons/512.png',
-'assets/icons/1024.png',
-'assets/icons/m_96.png',
-'assets/icons/m_192.png',
-'assets/icons/m_384.png',
-'assets/icons/m_512.png',
-'assets/icons/m_1024.png'
+'icons/48.png',
+'icons/96.png',
+'icons/128.png',
+'icons/256.png',
+'icons/512.png',
+'icons/1024.png'
 ]; 
 /* Avvia il Service Worker e memorizza il contenuto nella cache */
 self.addEventListener('install', function(e) {
