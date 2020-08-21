@@ -1,0 +1,79 @@
+<!-- (c)2020 Giuseppe Rossi -->
+
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+
+  <!-- PWACompat -->
+  <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+
+  <meta charset="utf-8">
+  <title>Paramount Network</title>
+  <meta name="Description" content="Le serie TV, i film e le novità di Paramount Network, Spike e VH1">
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no">
+  <link rel="icon" type="image/png" href="assets/icons/48.png" sizes="48x48">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Social Media Preview -->
+  <meta property="og:title" content="Paramount Network">
+  <meta property="og:description" content="Molise Run Game">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="giusreds.github.io/paramount-pwa">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Style -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background-color:#0166A4;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
+    .embed-responsive {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .embed-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      overflow: hidden;
+    }
+  </style>
+
+  <!-- X-Frame-Bypass -->
+  <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+  <script src="x-frame-bypass.js" type="module"></script>
+
+</head>
+
+<body>
+
+  <div class="embed-responsive">
+    <iframe is="x-frame-bypass" src="https://www.paramountnetwork.com"></iframe>
+  </div>
+
+  <!-- Registrazione Service Worker -->>
+  <script async>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          // Registrazione OK
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // Registrazione KO
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
