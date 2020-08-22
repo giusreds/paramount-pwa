@@ -4,12 +4,6 @@
 <html lang="it">
 <head>
 
-  <meta http-equiv="refresh" content="2;URL=https://www.paramountnetwork.com">
-
-  <!-- X-Frame-Bypass module -->
-  <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
-  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-
   <!-- PWACompat -->
   <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 
@@ -58,10 +52,6 @@
 
 <body>
 
-  <div class="embed-responsive">
-    <iframe is="x-frame-bypass" src="https://www.paramountnetwork.it" allowfullscreen></iframe>
-  </div>
-
   <!-- Registrazione Service Worker -->
   <script async>
     if ('serviceWorker' in navigator) {
@@ -75,6 +65,27 @@
         });
       });
     }
+  </script>
+
+  <script>
+
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    function pwa() {
+      var isPwa = getParameterByName("pwa");
+      if (isPwa) window.location.replace("htts://www.paramountnetwork.com/");
+    }
+
+    window.onload = pwa();
+
   </script>
 
 </body>
