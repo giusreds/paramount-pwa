@@ -41,7 +41,7 @@
     }
   ],
   "start_url": "index.html?pwa=1",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "auto",
   "theme_color": "#0166A4",
   "background_color": "#0166A4"
