@@ -85,15 +85,13 @@
       return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    function pwa() {
+    window.addEventListener("load", function() {
       var isPwa = getParameterByName("pwa");
       if (isPwa)
-        window.location.replace("http://www.paramountnetwork.com/");
+        document.head.innerHTML += <meta http-equiv="refresh" content="0;url=https://www.paramountnetwork.com/">
       else
         document.getElementById("container").style.display = "block";
-    }
-
-    window.onload = pwa();
+    });
 
   </script>
 
